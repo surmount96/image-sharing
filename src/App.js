@@ -10,8 +10,8 @@ import { HeartFillIcon, HeartLightIcon } from './assets/api/svg';
 import { Loading } from './components/loading';
 
 function App() {
-  const data = useSelector(  state => (  state.imageFetch));
-  const {loading} = useSelector(  state => (  state.loadingReducer));
+  const data = useSelector(  state => ( state?.imageFetch));
+  const {loading} = useSelector(  state => (  state?.loadingReducer));
   const dispatch = useDispatch();
   let list = data.photos;
   const updateLike = () => {

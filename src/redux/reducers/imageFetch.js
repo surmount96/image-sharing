@@ -27,11 +27,9 @@ export default function (state = initialState, action) {
                 ...state,
             };
         case FETCH_PREVIEW:
-            const results = JSON.parse(localStorage.getItem('IM_results'));
-            const list = results.length > 0 ? results : [action.payload];
             return {
                 ...state,
-                photos : list
+                photos : action.payload
             };
         default:
             return state;

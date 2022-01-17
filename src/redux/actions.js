@@ -19,11 +19,19 @@ export const updateLikes = (content) => ({
 export const fetchImages = () => async dispatch => {
     dispatch(startLoading())
     try {
-        const res = await ApiService.fetchNasaImages();
-        if(res) {
-            dispatch(stopLoading())
-            return dispatch({type: FETCH_PREVIEW, payload: res.data})
+        let results = JSON.parse(localStorage.getItem('IM_results'));
+        let resp = [];
+        if(results != null) {
+            resp = results
+        } else {
+            const res = await ApiService.fetchNasaImages();
+            resp = [res.data];
         }
+        if(resp) {
+            dispatch(stopLoading())
+            return dispatch({type: FETCH_PREVIEW, payload: resp})
+        }
+        
     }catch(err) {
         console.log(err)
     }
