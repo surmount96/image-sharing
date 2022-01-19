@@ -25,8 +25,8 @@ export const HeartFillIcon = () => {
             </g>
             <path d="M4 0V-1H3V0H4ZM28 0H29V-1H28V0ZM28 24V25H29V24H28ZM4 24H3V25H4V24ZM4 1H28V-1H4V1ZM27 0V24H29V0H27ZM28 23H4V25H28V23ZM5 24V0H3V24H5Z" fill="white"/>
             <defs>
-            <filter id="filter0_d_14_1772" x="0" y="1" width="32.0001" height="29.4938" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <filter id="filter0_d_14_1772" x="0" y="1" width="32.0001" height="29.4938" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
             <feOffset dy="4"/>
             <feGaussianBlur stdDeviation="2"/>
@@ -54,4 +54,15 @@ export const SettingsIcon = () => {
     <path d="M15 20V23" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M9 20V23" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>);
+}
+
+
+
+export const CloseIcon = () => {
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 6L18.7742 18.7742" stroke="#14142B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M6 18.7742L18.7742 5.99998" stroke="#14142B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
 }

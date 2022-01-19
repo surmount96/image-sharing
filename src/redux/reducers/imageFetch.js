@@ -21,7 +21,9 @@ export default function (state = initialState, action) {
             };
 
         case UPDATE_LIKES:
-            state.photos[state.id].likes = state.photos[state.id].likes ? false : true;
+            
+            let position = action.payload.id;
+            state.photos[position][13] = state.photos[position][13] ? false : true;
             localStorage.setItem('IM_results',JSON.stringify(state.photos));
             return {
                 ...state,

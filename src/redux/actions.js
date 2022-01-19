@@ -1,11 +1,19 @@
 import { IMAGE_PREVIEW, FETCH_PREVIEW, UPDATE_LIKES } from "./types"
 import ApiService from '../config/ApiService';
 import { startLoading,stopLoading } from "./loadingActions";
+
 export const updateImage = (content) => ({
     type: IMAGE_PREVIEW,
     payload:{
         isOpen:true,
         ...content
+    }
+})
+
+export const closeImage = () => ({
+    type: IMAGE_PREVIEW,
+    payload:{
+        isOpen:false
     }
 })
 
@@ -25,7 +33,7 @@ export const fetchImages = () => async dispatch => {
             resp = results
         } else {
             const res = await ApiService.fetchNasaImages();
-            resp = [res.data];
+            resp = res.data.results;
         }
         if(resp) {
             dispatch(stopLoading())
