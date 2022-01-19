@@ -1,5 +1,4 @@
 import { IMAGE_PREVIEW, FETCH_PREVIEW, UPDATE_LIKES } from "../types";
-import { photos } from "../../assets/api/photos";
 
 const initialState = {
     isOpen:false,

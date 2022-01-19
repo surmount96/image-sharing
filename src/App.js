@@ -61,7 +61,7 @@ function App() {
         </div>
         <div className={ data.isOpen ? ` lg:w-4/12 md:w-2/5 w-full mb-4 transition-all bg-black h-full` : 'hidden '}>
           <div className={`fixed top-0 bg-white`} style={{height:'100vh'}}>
-            <div className="flex justify-end p-3" onClick={close}><CloseIcon /></div>
+            <div className="flex justify-end p-3 cursor-pointer" onClick={close}><CloseIcon /></div>
             <div className="bg-white p-5 lg:mx-5">
               <PhotoView src={data.photo?.[10]} size="w-full h-56"/>
               <div className="flex justify-between items-center my-3">
